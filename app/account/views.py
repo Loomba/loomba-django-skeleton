@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 import django.contrib.auth as django_auth
 
-from app.core.utils.decorators import log, anonymous_required
+from core.utils.decorators import log, anonymous_required
 
 from . import models
 from . import forms
