@@ -330,8 +330,8 @@ SUIT_CONFIG = {
         )},
         # Others
         '-',
-        {'label': 'Documentation', 'icon': 'icon-bookmark', 'url': 'https://github.com/KenanBek/django-skeleton/wiki'},
-        {'label': 'Report a bug', 'icon': 'icon-comment', 'url': 'http://github.com/kenanbek/django-skeleton/issues'},
+        {'label': 'Documentation', 'icon': 'icon-bookmark', 'url': 'https://github.com/Loomba/loomba-django-skeleton/wiki'},
+        {'label': 'Report a bug', 'icon': 'icon-comment', 'url': 'http://github.com/Loomba/loomba-django-skeleton/issues'},
     ),
     # misc
     'LIST_PER_PAGE': 50
