@@ -33,7 +33,7 @@ EMAIL_HOST = 'host'
 EMAIL_HOST_USER = 'user'
 EMAIL_HOST_PASSWORD = 'password'
 ADMINS = (
-    ('Kenan Bek', 'mail@kenanbek.me'),
+    ('Osvaldo Demo', 'osvaldo.demo@loomba.co.nz'),
 )
 MANAGERS = ADMINS
 
@@ -61,9 +61,8 @@ INSTALLED_APPS = (
     'template_timings_panel',
     'core',
     'account',
-    'blog',
-    'cart',
 )
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.gzip.GZipMiddleware',  # must be at the start
     'debreach.middleware.RandomCommentMiddleware',  # must be at the start but after compression middleware
@@ -136,15 +135,13 @@ CACHES = {
 
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
-    ('az', _('Azerbaijan')),
-    ('ru', _('Russian')),
     ('en', _('English')),
 )
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'files/locale/'),
 )
 USE_TZ = True
-TIME_ZONE = 'Asia/Baku'
+TIME_ZONE = 'Pacific/Auckland'
 USE_I18N = True
 USE_L10N = True
 DATE_FORMAT = 'd/m/Y'
@@ -275,13 +272,13 @@ LOGGING = {
 
 APPLICATION_URL = 'http://localhost:8000'
 APPLICATION_CONFIG = {
-    'title': _('Project Title'),
+    'title': _('Cheap Flights Finder'),
     'short_title': _('PT'),
-    'author': 'Kenan Bek, http://kenanbek.me',
+    'author': 'Osvaldo Demo, http://www.loomba.co.nz',
     'slogan': _('Code while alive!'),
     'description': _('Project Description.'),
     'keywords': _('django, project, template, skeleton, base'),
-    'copyright': "&copy; 2015 <a href='http://example.com'>Example Co.</a>",
+    'copyright': "&copy; 2015 <a href='http://www.loomba.co.nz'>Loomba Ltd</a>",
     'google_id': 'google-id',
     'facebook_id': '1520447268200947',
     'twitter_id': 'twitter-id',
@@ -290,7 +287,7 @@ APPLICATION_CONFIG = {
 APPLICATION_CONTENT_COUNT = 10
 APPLICATION_CONTENT_MAXIMUM_COUNT = 20
 APPLICATION_DUMMY_DATA_COUNT = 7
-APPLICATION_FROM_EMAIL = 'Title <noreply@projectdomain.com>'
+APPLICATION_FROM_EMAIL = 'Cheap Flights Finder <cheap-flights-finder@loomba.co.nz>'
 APPLICATION_EMAIL_MANUAL_TIMEOUT = 3  # In minutes
 APPLICATION_MONITORING = DEBUG
 APPLICATION_MONITOR_STUFF_USERS = DEBUG
@@ -299,7 +296,7 @@ APPLICATION_MONITOR_STUFF_USERS = DEBUG
 
 SUIT_CONFIG = {
     # header
-    'ADMIN_NAME': 'Administration',
+    'ADMIN_NAME': 'Cheap Flights Finder - Administration',
     'HEADER_DATE_FORMAT': 'l, j. F Y',
     'HEADER_TIME_FORMAT': 'H:i',
     # forms
@@ -330,42 +327,6 @@ SUIT_CONFIG = {
             {'model': 'auth.user', 'label': 'User'},
             {'model': 'account.profile', 'label': 'Profile'},
             {'model': 'auth.group', 'label': 'Group'},
-        )},
-        # Blog
-        '-',
-        {'label': 'Blog', 'icon': 'icon-th', 'models': (
-            {'model': 'blog.contact', 'label': 'Contacts'},
-            {'model': 'blog.subscriber', 'label': 'Subscribers'},
-            {'model': 'blog.document', 'label': 'Documents'},
-            {'model': 'blog.slider', 'label': 'Sliders'},
-            {'model': 'blog.slide', 'label': 'Slides'},
-            {'model': 'blog.beep', 'label': 'Beeps'},
-        )},
-        {'label': 'Page', 'icon': 'icon-th', 'models': (
-            {'model': 'blog.page', 'label': 'Pages'},
-            {'model': 'blog.widget', 'label': 'Widgets'},
-        )},
-        {'label': 'Post', 'icon': 'icon-th', 'models': (
-            {'model': 'blog.post', 'label': 'Posts'},
-            {'model': 'blog.category', 'label': 'Categories'},
-        )},
-        # Cart
-        '-',
-        {'label': 'Cart', 'icon': 'icon-th', 'models': (
-            {'model': 'cart.currency', 'label': 'Currencies'},
-            {'model': 'cart.manufacturer', 'label': 'Manufactureres'},
-            {'model': 'cart.category', 'label': 'Categories'},
-            {'model': 'cart.attributegroup', 'label': 'Attribute groups'},
-            {'model': 'cart.attribute', 'label': 'Attributes'},
-        )},
-        {'label': 'Shop', 'icon': 'icon-th', 'models': (
-            {'model': 'cart.product', 'label': 'Products'},
-            {'model': 'cart.shop', 'label': 'Shops'},
-            {'model': 'cart.shopproduct', 'label': 'Shops and Products'},
-        )},
-        {'label': 'Orders', 'icon': 'icon-th', 'models': (
-            {'model': 'cart.productreview', 'label': 'Product reviews'},
-            {'model': 'cart.shopreview', 'label': 'Shop reviews'},
         )},
         # Others
         '-',

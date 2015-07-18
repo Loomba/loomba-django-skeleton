@@ -73,8 +73,8 @@ class Request(abstracts.ModelAbstract):
     user_is_active = models.BooleanField(default=False)
 
     client_name = models.CharField(max_length=512, null=True, blank=True)
-    client_ip = models.IPAddressField(null=True, blank=True)
-    client_real_ip = models.IPAddressField(null=True, blank=True)
+    client_ip = models.GenericIPAddressField(null=True, blank=True)
+    client_real_ip = models.GenericIPAddressField(null=True, blank=True)
     client_agent = models.CharField(max_length=512, null=True, blank=True)
 
     server_name = models.CharField(max_length=512, null=True, blank=True)

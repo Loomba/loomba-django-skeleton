@@ -3,7 +3,7 @@ python:
   - "2.7"
 # django environment
 env:
-  - DJANGO_VERSION=1.6.7
+  - DJANGO_VERSION=1.8.3
 # install dependencies
 install:
   - pip install -r requirements.txt

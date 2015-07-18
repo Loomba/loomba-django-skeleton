@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse
-from django.forms.util import ErrorList
+from django.forms.utils import ErrorList
 from django.utils.translation import ugettext_lazy as _
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -7,7 +7,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 import django.contrib.auth as django_auth
 
-from core.utils.decorators import log, anonymous_required
+from app.core.utils.decorators import log, anonymous_required
+
 from . import models
 from . import forms
 
